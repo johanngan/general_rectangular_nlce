@@ -1,0 +1,9 @@
+function storefile = get_storefile(obj, rectangle_size, system_displacement)
+    % STOREFILE = GET_STOREFILE(RECTANGLE_SIZE, SYSTEM_DISPLACEMENT)
+    %   Forms the full store file from the rectangle size and overall
+    %   spatial displacement of the system.
+    storefile = fullfile(obj.storepath, ...
+        sprintf('%ix%i_%i_%i.txt', ...
+            rectangle_size(1), rectangle_size(2), ...
+            system_displacement(1), system_displacement(2)));
+end
